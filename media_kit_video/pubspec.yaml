@@ -48,4 +48,6 @@ flutter:
       android:
         package: com.alexmercerind.media_kit_video
         pluginClass: MediaKitVideoPlugin
+      ohos:
+        pluginClass: MediaKitVideoPlugin
       web:

@@ -1,3 +1,10 @@
+/*
+ * @Author: 
+ * @Date: 2025-03-13 12:53:51
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-03-13 17:40:05
+ * @Description: file content
+ */
 /// This file is a part of media_kit (https://github.com/media-kit/media-kit).
 ///
 /// Copyright © 2021 & onwards, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
@@ -225,6 +232,7 @@ class NativePlayer extends PlatformPlayer {
 
       // Jump to the specified [index] (in both cases either [play] is `true` or `false`).
       await _setPropertyInt64('playlist-pos', index);
+      print ("[Player] open: $playable");
     }
 
     if (synchronized) {
@@ -371,6 +379,7 @@ class NativePlayer extends PlatformPlayer {
         await _setPropertyInt64('playlist-pos', 0);
       }
       await _setPropertyFlag('pause', false);
+      print ("[Player] play: $state");
     }
 
     if (synchronized) {

@@ -1,8 +1,18 @@
+/*
+ * @Author: 
+ * @Date: 2025-03-13 12:53:51
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-03-13 16:05:07
+ * @Description: file content
+ */
 /// This file is a part of media_kit (https://github.com/media-kit/media-kit).
 ///
 /// Copyright © 2021 & onwards, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
 /// All rights reserved.
 /// Use of this source code is governed by MIT license that can be found in the LICENSE file.
+
+import 'dart:io';
+// import 'dart:io' show Platform;
 
 import 'package:universal_platform/universal_platform.dart';
 
@@ -24,7 +34,7 @@ abstract class MediaKit {
     if (_initialized) return;
 
     try {
-      if (UniversalPlatform.isWindows) {
+       if (UniversalPlatform.isWindows) {
         nativeEnsureInitialized(libmpv: libmpv);
       } else if (UniversalPlatform.isLinux) {
         nativeEnsureInitialized(libmpv: libmpv);
@@ -36,8 +46,9 @@ abstract class MediaKit {
         nativeEnsureInitialized(libmpv: libmpv);
       } else if (UniversalPlatform.isWeb) {
         webEnsureInitialized(libmpv: libmpv);
-      }
+      } 
       _initialized = true;
+      print("media_kit: initialized");
     } catch (_) {
       print(
         '\n'

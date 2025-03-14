@@ -261,6 +261,8 @@ class NativeVideoController extends PlatformVideoController {
             try {
               debugPrint(call.method.toString());
               debugPrint(call.arguments.toString());
+              print(call.method.toString());
+              print(call.arguments.toString());
               switch (call.method) {
                 case 'VideoOutput.Resize':
                   {

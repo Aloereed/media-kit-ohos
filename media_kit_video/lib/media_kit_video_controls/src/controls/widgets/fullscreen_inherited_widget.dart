@@ -1,3 +1,10 @@
+/*
+ * @Author: 
+ * @Date: 2025-03-13 12:53:52
+ * @LastEditors: 
+ * @LastEditTime: 2025-03-13 14:21:12
+ * @Description: file content
+ */
 /// This file is a part of media_kit (https://github.com/media-kit/media-kit).
 ///
 /// Copyright © 2021 & onwards, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
@@ -62,7 +69,7 @@ class _FullscreenInheritedWidgetPopScopeState
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      onPopInvokedWithResult: (_, __) {
+      onPopInvoked: (_) {
         // Make sure to exit native fullscreen when this route is popped from the navigator.
         onExitFullscreen(context)?.call();
       },

@@ -1,3 +1,10 @@
+/*
+ * @Author: 
+ * @Date: 2025-03-13 12:53:51
+ * @LastEditors: 
+ * @LastEditTime: 2025-03-13 15:38:02
+ * @Description: file content
+ */
 /// This file is a part of media_kit (https://github.com/media-kit/media-kit).
 ///
 /// Copyright © 2021 & onwards, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
@@ -16,6 +23,7 @@ Widget AdaptiveVideoControls(VideoState state) {
   switch (Theme.of(state.context).platform) {
     case TargetPlatform.android:
     case TargetPlatform.iOS:
+    case TargetPlatform.ohos:
       return MaterialVideoControls(state);
     case TargetPlatform.macOS:
     case TargetPlatform.windows:

@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.linux: OpenUpwardsPageTransitionsBuilder(),
             TargetPlatform.macOS: OpenUpwardsPageTransitionsBuilder(),
             TargetPlatform.iOS: OpenUpwardsPageTransitionsBuilder(),
+            TargetPlatform.ohos: OpenUpwardsPageTransitionsBuilder(),
             TargetPlatform.android: OpenUpwardsPageTransitionsBuilder(),
           },
         ),

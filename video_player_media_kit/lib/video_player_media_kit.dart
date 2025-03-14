@@ -48,12 +48,14 @@ class VideoPlayerMediaKit {
     bool windows = false,
     bool linux = false,
     bool web = false,
+    bool ohos =false,
   }) {
     if ((UniversalPlatform.isAndroid && android) ||
         (UniversalPlatform.isIOS && iOS) ||
         (UniversalPlatform.isMacOS && macOS) ||
         (UniversalPlatform.isWindows && windows) ||
         (UniversalPlatform.isLinux && linux) ||
+        (Platform.isOhos && ohos)
         (UniversalPlatform.isWeb && web)) {
       MediaKit.ensureInitialized();
       MediaKitVideoPlayer.registerWith();

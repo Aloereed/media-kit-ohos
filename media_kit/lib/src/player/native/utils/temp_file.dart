@@ -31,6 +31,8 @@ abstract class TempFile {
       result = Directory.systemTemp.path;
     } else if (Platform.isAndroid) {
       result = AndroidHelper.filesDir;
+    } else if (Platform.isOhos){
+      result = Directory.systemTemp.path;
     }
     if (result != null) {
       return result;
